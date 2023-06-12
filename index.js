@@ -1,4 +1,3 @@
-import { DateTime } from "./modules/luxon.js";
 import renderItems from './modules/render.js';
 import addItem from './modules/addItems.js';
 import deleteItem from './modules/delete.js';
@@ -9,12 +8,9 @@ class BookManager {
     this.content = document.querySelector('.books');
     this.userData = JSON.parse(localStorage.getItem('formdata')) || [];
     this.count = this.userData.length;
-    this.dateNow = DateTime.now().toString();
-    this.renderBooks();
     this.setupEventListeners();
   }
 
-  
   setupEventListeners() {
     addItem(this.userData, this.count);
     linkEvent();
@@ -25,14 +21,12 @@ class BookManager {
         deleteItem(id, this.userData, this.content);
       }
     });
-
   }
 
   renderBooks() {
     renderItems(this.userData);
   }
-
 }
 
 const bookManager = new BookManager();
-
+bookManager.renderBooks();

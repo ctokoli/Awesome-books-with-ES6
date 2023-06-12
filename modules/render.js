@@ -1,11 +1,14 @@
- 
- export default class RenderBooks{
-    constructor(userData){
-        this.userData = userData;
-    }
+import { DateTime } from "./luxon.js";
 
+  const renderItems = (userData) => {
+    let dateNow = DateTime.now().toString();
+    let time = DateTime.now().toFormat("MMMM dd yyyy, hh:mma");
+    let content = document.querySelector('.books');
+    const showTime = document.querySelector('.time');
     let placeholder = '';
-    this.userData.forEach((book, index) => {
+    let timePlaceHolder = `<h3>${time}</h3>`;
+    //console.log(time);
+     userData.forEach((book, index) => {
       const backgroundColor = index % 2 === 0 ? 'white' : '#d2d2d2';
       placeholder += `
        <div class="book-item" style="background-color: ${backgroundColor};">
@@ -17,5 +20,10 @@
   
       `;
     });
-    this.content.innerHTML = placeholder;
-  }
+    content.innerHTML = placeholder;
+    showTime.innerHTML = timePlaceHolder;
+ };
+
+ export default renderItems;
+
+ 

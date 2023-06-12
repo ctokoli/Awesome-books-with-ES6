@@ -16,7 +16,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border: 1px solid dimgray;
-    margin-bottom: 53px;
+    margin-bottom: 11px;
   }
   
   .nav h4 {
@@ -156,4 +156,10 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+  .time {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 55px;
+}
   

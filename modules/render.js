@@ -1,13 +1,11 @@
 import { DateTime } from './luxon.js';
 
 const renderItems = (userData) => {
-  const dateNow = DateTime.now().toString();
   const time = DateTime.now().toFormat('MMMM dd yyyy, hh:mma');
   const content = document.querySelector('.books');
   const showTime = document.querySelector('.time');
   let placeholder = '';
   const timePlaceHolder = `<h3>${time}</h3>`;
-   console.log(time);
   userData.forEach((book, index) => {
     const backgroundColor = index % 2 === 0 ? 'white' : '#d2d2d2';
     placeholder += `

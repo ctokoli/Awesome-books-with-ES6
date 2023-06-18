@@ -8,10 +8,10 @@ const addItem = (userData, count) => {
   const content = document.querySelector('.books');
   button.addEventListener('click', (e) => {
     e.preventDefault();
-    const formData = new Book(count + 1, title.value, author.value);
+    const formData = new Book(count +=1, title.value, author.value);
     userData.push(formData);
     localStorage.setItem('formdata', JSON.stringify(userData));
-    count += 1;
+    //count += 1;
     renderBooks(userData, content);
     title.value = '';
     author.value = '';

@@ -1,6 +1,7 @@
 import { DateTime } from './luxon.js';
 
 const renderItems = (userData) => {
+  console.log(userData);
   const time = DateTime.now().toFormat('MMMM dd yyyy, hh:mma');
   const content = document.querySelector('.books');
   const showTime = document.querySelector('.time');

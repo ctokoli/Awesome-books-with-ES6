@@ -14,7 +14,6 @@ class BookManager {
   setupEventListeners() {
     addItem(this.userData, this.count);
     linkEvent();
-
     this.content.addEventListener('click', (e) => {
       if (e.target.classList.contains('remove-btn')) {
         const id = parseInt(e.target.dataset.id, 10);

@@ -25,7 +25,7 @@
 
 # 📖 Awesome Books Project <a name="about-project"></a>
 
-**Awesome Books Project**  The goal of this project is to learn how to build basic website that allows users to add/remove books from a list. This is implemented by using JavaScript objects and arrays. I also used Localstorage to store the array objects in the browser.  
+**Awesome Books Project**The goal of this project is to learn how to build basic website that allows users to add/remove books from a list. This is implemented by using JavaScript objects and arrays. I used Localstorage to store the array objects in the browser.  
 
 
 
